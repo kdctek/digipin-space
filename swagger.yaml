@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  title: DIGIPIN API
+  title: DIGIPIN Space API
   description: Encode and decode DIGIPIN based on latitude and longitude
   version: 1.0.0
 servers:
-  - url: http://localhost:5000/api
+  - url: https://digipin.space/api
 
 paths:
-  /digipin/encode:
+  /encode:
     post:
       summary: Encode lat/lon into DIGIPIN
       requestBody:
@@ -59,7 +59,7 @@ paths:
         '400':
           description: Invalid input
 
-  /digipin/decode:
+  /decode:
     post:
       summary: Decode DIGIPIN to coordinates
       requestBody:
