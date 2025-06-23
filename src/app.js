@@ -18,9 +18,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // Swagger Docs Route
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // DIGIPIN API Routes
-app.use('/api/digipin', digipinRoutes);
+app.use('/api', digipinRoutes);
 
 module.exports = app;
